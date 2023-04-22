@@ -25,30 +25,91 @@
 
 
 /* bacic styles */
-.link {
-    text-decoration: none
-}
-
-.list {
-    list-style: none;
-
-}
-
-/* nav */
-
-
-
 body {
     background-color: var(--primary-text-white-color);
     font-family: Roboto, sans-serif;
     color: #434455
 }
 
+html {
+    box-sizing: border-box;
+}
 
-/* header styles */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.link {
+    text-decoration: none
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+
+    outline: 2px solid red;
+    outline-offset: -2px;
+}
+
+ul {
+    /* рекомендація ментора */
+    padding-left: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn-primary {
+    border: 1px transparent;
+    border-radius: 4px;
+}
+
+/* .btn-secondary {
+    border: 1px solid #E7E9FC;
+} */
+
+/* hidden */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* header styles + header and footer logo*/
 .header {}
 
-.logo-link {
+.header-logo-link,
+.footer-logo-link {
     color: var(--acent-color);
     font-family: "Raleway", sans-serif;
     font-style: normal;
@@ -57,6 +118,13 @@ body {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-right: 76px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.header-logo-link {
+    display: inline-block;
 
 }
 
@@ -64,15 +132,24 @@ body {
     color: var(--title-text-color);
 }
 
-.header-nav {}
+.header-nav {
+    margin-right: auto;
+    display: flex;
+}
 
-.logo-link {}
+.container-nav-contact {
+    display: flex;
+    align-items: center;
+}
 
 .logo-text {
     color: var(--dark-bg-color)
 }
 
-.header-list {}
+.header-list {
+    display: flex;
+    gap: 40px;
+}
 
 .header-item {}
 
@@ -83,6 +160,10 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding: 24px 0 24px 0;
+    display: flex;
+    gap: 40px;
+
 }
 
 .header-link:hover,
@@ -95,18 +176,25 @@ body {
     font-style: normal
 }
 
-.contacts-list {}
+.contacts-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+}
 
 .contacts-item {}
 
 .contacts-link {
     color: var(--primary-text-color);
-
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-decoration: none;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
 }
 
 .contacts-link:hover,
@@ -114,10 +202,20 @@ body {
     color: #404bbf;
 }
 
+.container-nav-contact {}
+
 /* <  hero section */
+.container-hero,
+.container-goals {
+    margin-bottom: 120px;
+}
+
 .hero {
     background-color: var(--dark-bg-color);
+    text-align: center;
 }
+
+.container-hero {}
 
 .hero-title {
     color: var(--primary-text-white-color);
@@ -129,10 +227,16 @@ body {
     letter-spacing: 0.02em;
     text-decoration: none;
     text-transform: none;
-    text-align: center
+    margin-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 496px;
+    padding-top: 188px;
 }
 
 .hero-btn {
+    display: inline-block;
+    padding: 16px 32px;
     font-family: inherit;
     background-color: #4D5AE5;
     color: var(--primary-text-white-color);
@@ -141,6 +245,14 @@ body {
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
+    margin-bottom: 188px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    min-width: 169px;
+    min-height: 56px;
+    text-align: center;
+
 }
 
 .hero-btn:hover,
@@ -150,6 +262,8 @@ body {
 }
 
 /* goals */
+.container-goals {}
+
 .goals {}
 
 .goals-title {
@@ -164,19 +278,25 @@ body {
 
 .goals-list {}
 
-.goals-item {}
+.goals-item: {}
 
 .goals-desc {
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-
+    margin-right: 24px;
+    /* прибрати margin-right 0; для останнього абзаццу */
 }
+
+
 
 /* services */
 
 .services {}
+
+.container {}
+
 
 .services-title {
     color: var(--title-text-color);
@@ -186,14 +306,24 @@ body {
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    text-align: center
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 72px;
 }
 
 .services-list {}
 
-.services-item {}
+.services-item {
+    margin-right: 24px;
+}
 
 /* team */
+.container-team {}
+
+.container-team-member {
+    margin-right: 24px;
+    border-radius: 0px 0px 4px 4px;
+}
 
 .team {
     background-color: var(--light-bg-color);
@@ -205,7 +335,11 @@ body {
     line-height: 1.11;
     text-align: center;
     letter-spacing: 0.02em;
-    text-transform: capitalize
+    text-transform: capitalize;
+    padding-top: 120px;
+    padding-bottom: 72px;
+
+
 }
 
 .team-list {}
@@ -215,7 +349,10 @@ body {
     background-color: #FFFFFF
 }
 
-.team-img {}
+.team-img {
+    width: 264px;
+    margin-bottom: 32px;
+}
 
 .team-member {
     color: var(--title-text-color);
@@ -224,6 +361,7 @@ body {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .team-desc {
@@ -231,6 +369,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding-bottom: 120px;
 }
 
 /* PORTFOLIO PAGE */
@@ -238,7 +377,11 @@ body {
 /* content section */
 .content {}
 
-.content-list {}
+.content-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
 
 .content-item {}
 
@@ -252,6 +395,10 @@ body {
     letter-spacing: 0.04em;
     font-family: "Roboto", sans-serif;
     cursor: pointer;
+    padding: 12px 24px;
+    min-width: 69px;
+    min-height: 48px;
+    border-radius: 4px;
 }
 
 .content-btn:hover,
@@ -290,11 +437,16 @@ body {
 
 /* footer */
 
+.container-footer {}
+
 .footer {
     background-color: var(--dark-bg-color);
 }
 
-.logo-link {}
+.footer-logo-link {
+    display: inline-block;
+    padding-top: 100px;
+}
 
 .footer-logo-text {
     color: #f4f4fd
@@ -305,4 +457,5 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding-bottom: 100px;
 }
