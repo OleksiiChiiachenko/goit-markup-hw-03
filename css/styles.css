@@ -19,7 +19,8 @@
     --primary-font: Roboto, sans-serif;
     --secondary-font: Raleway, sans-serif;
     /* others */
-
+    --indent: 24px;
+    --items: 4;
 }
 
 
@@ -59,6 +60,10 @@ p {
     margin: 0;
 }
 
+.subtitle {
+    margin-bottom: 8px;
+}
+
 img {
     display: block;
 }
@@ -73,8 +78,11 @@ img {
     outline-offset: -2px;
 }
 
+.section {
+    padding-bottom: 120px;
+}
+
 ul {
-    /* рекомендація ментора */
     padding-left: 0;
 }
 
@@ -87,9 +95,20 @@ button {
     border-radius: 4px;
 }
 
-/* .btn-secondary {
-    border: 1px solid #E7E9FC;
-} */
+/* card set */
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--indent);
+
+}
+
+.card-set-item {
+    flex-basis: calc((100% - var(--indent) * (var(--items) -1)) / var(--items));
+
+}
+
+
 
 /* hidden */
 .visually-hidden {
@@ -106,7 +125,9 @@ button {
 }
 
 /* header styles + header and footer logo*/
-.header {}
+.header {
+    border-bottom: 1px solid var(--color-cornflower);
+}
 
 .header-logo-link,
 .footer-logo-link {
@@ -206,13 +227,15 @@ button {
 
 /* <  hero section */
 .container-hero,
-.container-goals {
-    margin-bottom: 120px;
-}
+.container-goals {}
 
 .hero {
     background-color: var(--dark-bg-color);
     text-align: center;
+    padding-bottom: 188px;
+    padding-top: 188px;
+
+
 }
 
 .container-hero {}
@@ -231,11 +254,10 @@ button {
     margin-left: auto;
     margin-right: auto;
     max-width: 496px;
-    padding-top: 188px;
 }
 
 .hero-btn {
-    display: inline-block;
+    display: block;
     padding: 16px 32px;
     font-family: inherit;
     background-color: #4D5AE5;
@@ -245,7 +267,6 @@ button {
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
-    margin-bottom: 188px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 4px;
@@ -262,6 +283,10 @@ button {
 }
 
 /* goals */
+.goals {
+    padding-top: 120px;
+}
+
 .container-goals {}
 
 .goals {}
@@ -273,10 +298,15 @@ button {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+
 }
 
 
-.goals-list {}
+.goals-list {
+    display: flex;
+    gap: 24px;
+
+}
 
 .goals-item: {}
 
@@ -285,8 +315,7 @@ button {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    margin-right: 24px;
-    /* прибрати margin-right 0; для останнього абзаццу */
+    width: 264px;
 }
 
 
@@ -294,8 +323,6 @@ button {
 /* services */
 
 .services {}
-
-.container {}
 
 
 .services-title {
@@ -307,22 +334,19 @@ button {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     text-align: center;
-    padding-top: 120px;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
 }
 
 .services-list {}
 
-.services-item {
-    margin-right: 24px;
-}
+.services-item {}
 
 /* team */
-.container-team {}
+
 
 .container-team-member {
-    margin-right: 24px;
     border-radius: 0px 0px 4px 4px;
+    text-align: center;
 }
 
 .team {
@@ -336,13 +360,9 @@ button {
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    padding-top: 120px;
-    padding-bottom: 72px;
-
-
+    margin-bottom: 72px;
 }
 
-.team-list {}
 
 
 .team-item {
@@ -350,7 +370,6 @@ button {
 }
 
 .team-img {
-    width: 264px;
     margin-bottom: 32px;
 }
 
@@ -369,18 +388,22 @@ button {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    padding-bottom: 120px;
+    padding-bottom: 32px;
 }
 
 /* PORTFOLIO PAGE */
 
 /* content section */
-.content {}
+.content {
+    padding-top: 96px;
+}
 
 .content-list {
     display: flex;
     gap: 24px;
     justify-content: center;
+    margin-bottom: 72px;
+
 }
 
 .content-item {}
@@ -415,9 +438,13 @@ button {
 
 .projects-list {}
 
-.projects-item {}
+.projects-item:nth-last-child(4n) {
+    margin-bottom: 48px;
+}
 
-.projects-img {}
+.projects-img {
+    margin-bottom: 32px;
+}
 
 .projects-title {
     color: var(--title-text-color);
@@ -446,6 +473,7 @@ button {
 .footer-logo-link {
     display: inline-block;
     padding-top: 100px;
+    margin-bottom: 18px;
 }
 
 .footer-logo-text {
