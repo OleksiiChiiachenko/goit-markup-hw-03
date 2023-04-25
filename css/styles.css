@@ -130,8 +130,7 @@ button {
 
 }
 
-.header-logo-link,
-.footer-logo-link {
+.header-logo-link {
     color: var(--acent-color);
     font-family: "Raleway", sans-serif;
     font-style: normal;
@@ -355,6 +354,7 @@ button {
 
 .team {
     background-color: var(--light-bg-color);
+    padding: 120px 0;
 }
 
 .team-title {
@@ -481,6 +481,15 @@ button {
 
 .footer-logo-link {
     display: inline-block;
+    color: var(--acent-color);
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
 
 }
 
